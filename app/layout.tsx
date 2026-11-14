@@ -1,8 +1,6 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
 import { Manrope, JetBrains_Mono } from 'next/font/google';
-import { getUser, getTeamForUser } from '@/lib/db/queries';
-import { SWRConfig } from 'swr';
 import { Analytics } from '@vercel/analytics/react';
 import { Footer } from '@/components/ui/footer';
 import { SITE_URL } from '@/lib/site';
@@ -70,19 +68,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(entityGraph) }}
         />
-        <SWRConfig
-          value={{
-            fallback: {
-              // We do NOT await here
-              // Only components that read this data will suspend
-              '/api/user': getUser(),
-              '/api/team': getTeamForUser()
-            }
-          }}
-        >
-          {children}
-          <Analytics />
-        </SWRConfig>
+        {children}
+        <Analytics />
         <Footer />
       </body>
     </html>

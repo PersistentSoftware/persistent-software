@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, Suspense } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Home, LogOut, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import {
   DropdownMenu,
@@ -11,14 +11,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { signOut } from '@/app/(login)/actions';
-import { usePathname, useRouter } from 'next/navigation';
-import { User } from '@/lib/db/schema';
-import useSWR from 'swr';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const navItems = [
   { label: 'Mobile', href: '/mobile' },
@@ -128,54 +122,6 @@ function MobileNav() {
   );
 }
 
-function UserMenu() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { data: user } = useSWR<User>('/api/user', fetcher);
-  const router = useRouter();
-
-  async function handleSignOut() {
-    await signOut();
-    router.refresh();
-    router.push('/');
-  }
-
-  if (!user) {
-    return null;
-  }
-
-  return (
-    <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-      <DropdownMenuTrigger>
-        <Avatar className="size-9 cursor-pointer">
-          <AvatarImage alt={user.name || ''} />
-          <AvatarFallback>
-            {user.email
-              .split(' ')
-              .map((n) => n[0])
-              .join('')}
-          </AvatarFallback>
-        </Avatar>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="flex flex-col gap-1">
-        <DropdownMenuItem className="cursor-pointer">
-          <Link href="/dashboard" className="flex w-full items-center">
-            <Home className="mr-2 size-4" strokeWidth={1.75} />
-            <span>Dashboard</span>
-          </Link>
-        </DropdownMenuItem>
-        <form action={handleSignOut} className="w-full">
-          <button type="submit" className="flex w-full">
-            <DropdownMenuItem className="w-full flex-1 cursor-pointer">
-              <LogOut className="mr-2 size-4" strokeWidth={1.75} />
-              <span>Sign out</span>
-            </DropdownMenuItem>
-          </button>
-        </form>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
-}
-
 function Header() {
   return (
     <header className="border-b border-rule bg-paper">
@@ -200,9 +146,6 @@ function Header() {
             </a>
           </Button>
           <MobileNav />
-          <Suspense fallback={null}>
-            <UserMenu />
-          </Suspense>
         </div>
       </div>
     </header>
