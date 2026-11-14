@@ -10,6 +10,7 @@ export const FOUNDER_NAME = 'Chris Sweigard';
 export const CONTACT_EMAIL = 'contact@persistentsoftware.com';
 export const BOOKING_URL = 'https://calendly.com/chris-persistentsoftware';
 export const TOKENLOG_URL = 'https://tokenlog.persistentsoftware.com';
+export const FOUNDER_LINKEDIN_URL = 'https://www.linkedin.com/in/chrissweigard';
 
 export const ENTITY_SUMMARY =
   'Persistent Software is an independent software engineering practice run by its founder, Chris Sweigard. It builds full-stack web applications, React Native mobile apps, payments and integrations, runs AI-assisted code migrations, and offers AI search optimization (SEO, AEO and GEO).';
@@ -24,9 +25,13 @@ export const DISAMBIGUATION =
  */
 export const ORGANIZATION_PROFILES: string[] = [
   'https://www.linkedin.com/company/persistent-software',
-  'https://wellfound.com/company/persistent-software'
+  'https://wellfound.com/company/persistent-software',
+  'https://github.com/PersistentSoftware'
 ];
-export const FOUNDER_PROFILES: string[] = [];
+export const FOUNDER_PROFILES: string[] = [
+  FOUNDER_LINKEDIN_URL,
+  'https://github.com/sweigardc'
+];
 
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const FOUNDER_ID = `${SITE_URL}/#chris-sweigard`;

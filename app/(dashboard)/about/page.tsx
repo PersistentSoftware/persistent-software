@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { Story } from './components/Story';
 import { Expertise } from './components/Expertise';
 import { Services } from './components/Services';
+import { Recommendations } from './components/Recommendations';
 import { FAQ } from './components/FAQ';
 import { CTA } from './components/CTA';
 
@@ -30,6 +31,7 @@ export default function About() {
       <Story />
       <Expertise />
       <Services />
+      <Recommendations />
       <FAQ />
       <CTA />
     </main>
