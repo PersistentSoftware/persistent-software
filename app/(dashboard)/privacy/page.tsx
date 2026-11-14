@@ -15,7 +15,7 @@ export default function Privacy() {
         <h2 className="mb-2 text-h4 text-graphite-900">2. Information We Collect</h2>
         <p>We may collect the following types of information:</p>
         <ul className="list-inside list-disc space-y-1">
-          <li>Personal Information (e.g., name, email address) when you contact us or sign up.</li>
+          <li>Personal Information (e.g., name, email address) when you contact us.</li>
           <li>Usage Data (e.g., browser type, pages visited, time spent).</li>
           <li>Cookies and tracking technologies for analytics and site functionality.</li>
         </ul>
