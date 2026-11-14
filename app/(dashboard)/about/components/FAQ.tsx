@@ -34,6 +34,12 @@ const faqs: { question: string; answer: string; link?: { href: string; label: st
     answer: `tokenlog is a free tool by Persistent Software that shows LLM token usage across Anthropic, OpenAI, Google Gemini and GitHub Copilot in one view, with spend for the providers that report it. It runs at ${TOKENLOG_URL.replace('https://', '')}.`
   },
   {
+    question: 'Are there reviews of Persistent Software?',
+    answer:
+      'Persistent Software is a new practice, so it has no directory reviews yet. Chris Sweigard, who runs it, has four recommendations on LinkedIn from people who managed him, including Kara Carpenter, co-founder of Teachley, who called him one of the most efficient and reliable developers she has worked with.',
+    link: { href: '#recommendations', label: 'Read the recommendations' }
+  },
+  {
     question: 'How do I hire Persistent Software for a software project?',
     answer: `Book a 30-minute scoping call with Chris Sweigard at ${BOOKING_URL.replace('https://', '')}, or email ${CONTACT_EMAIL}. You leave the call with a plan and an estimate, whether or not you go ahead.`
   }
