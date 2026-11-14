@@ -7,8 +7,10 @@ import { SITE_URL } from '../lib/site';
  *   pnpm indexnow            every URL in the live sitemap
  *   pnpm indexnow /about     just these paths
  *
- * Run it after a deploy: the engines fetch the key file from the live site to
- * confirm the submission comes from the site owner.
+ * .github/workflows/indexnow.yml runs it with no paths after every successful
+ * production deploy. Run it by hand only after the deploy is live: the engines
+ * fetch the key file from the live site to confirm the submission comes from
+ * the site owner.
  */
 const KEY = '97d5aea98f88568e1f768896b0c7c154';
 const KEY_LOCATION = `${SITE_URL}/${KEY}.txt`;
