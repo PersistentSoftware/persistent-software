@@ -8,7 +8,8 @@
     "db:seed": "npx tsx lib/db/seed.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "indexnow": "tsx scripts/indexnow.ts"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.6",
@@ -44,5 +45,8 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.8.3",
     "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "tsx": "4.20.6"
   }
 }
