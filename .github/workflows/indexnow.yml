@@ -1,0 +1,41 @@
+# Submit the sitemap to IndexNow after each production deploy, so Bing and the
+# other IndexNow engines recrawl what changed. Runs on Vercel's deployment
+# status rather than on push, because the key file and the new pages must be
+# live before the engines fetch them. Google doesn't use IndexNow.
+name: IndexNow
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      paths:
+        description: 'Paths to submit, space-separated (e.g. "/about /blog"). Empty submits the whole sitemap.'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    # Job-level, so skipped runs (preview deploys, pending statuses) don't hold or cancel it.
+    concurrency:
+      group: indexnow
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # The script only imports lib/site.ts, so tsx alone is enough; no full install.
+      - name: Submit to IndexNow
+        env:
+          PATHS: ${{ inputs.paths }}
+        run: npx --yes tsx@4.20.6 scripts/indexnow.ts $PATHS
