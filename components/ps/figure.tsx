@@ -14,6 +14,7 @@ export function Figure({
   src,
   alt = '',
   ratio = '16/9',
+  fit = 'cover',
   caption,
   sizes = '100vw',
   priority = false,
@@ -22,6 +23,8 @@ export function Figure({
   src?: string;
   alt?: string;
   ratio?: string;
+  /** `contain` shows the whole image inside the frame, for phone screens in a wide slot. */
+  fit?: 'cover' | 'contain';
   caption?: string;
   sizes?: string;
   priority?: boolean;
@@ -40,7 +43,7 @@ export function Figure({
             fill
             sizes={sizes}
             priority={priority}
-            className="object-cover"
+            className={fit === 'contain' ? 'object-contain' : 'object-cover'}
           />
         )}
       </div>

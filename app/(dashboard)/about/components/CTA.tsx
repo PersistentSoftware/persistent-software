@@ -36,8 +36,8 @@ export function CTA() {
         <Stat tone="ink" value="20" unit="+" className="p-0">
           Years shipping production software
         </Stat>
-        <Stat tone="ink" value="100" unit="%" className="p-0">
-          Of the code is yours at handover
+        <Stat tone="ink" value="10" unit="+" className="p-0">
+          Years BeerXchange has been live in both app stores
         </Stat>
       </div>
     </Band>

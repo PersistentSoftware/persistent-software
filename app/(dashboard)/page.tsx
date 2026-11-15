@@ -5,7 +5,8 @@ import { Stat } from '@/components/ps/stat';
 import { Terminal } from '@/components/ps/terminal';
 import { Services } from './components/Services';
 import { Process } from './components/Process';
-import { Product } from './components/Product';
+import { Proof } from './components/Proof';
+import { Built } from './components/Built';
 import { Practice } from './components/Practice';
 
 export const metadata: Metadata = {
@@ -37,20 +38,21 @@ export default function HomePage() {
   return (
     <main>
       <Band tone="ink" spine className="py-20 md:py-28">
-        <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
+        <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
           <div className="flex flex-col items-start gap-6">
             <span className="ps-label border-b border-signal-300/40 pb-1.5 tracking-[0.16em] text-signal-300">
-              Personal · Experienced · Fast
+              Full-stack · Mobile · Migrations · AI search
             </span>
-            <h1 className="text-h1 md:text-display">
-              Ship software
-              <br />
-              faster than ever.
+            {/* Smaller than the display size the one-column heroes use: this
+                headline shares the row with the terminal. */}
+            <h1 className="text-[38px] sm:text-h1 xl:text-[52px] xl:leading-[1.02]">
+              One senior engineer.
+              <span className="mt-2 block text-signal-400">A working prototype in week one.</span>
             </h1>
             <p className="max-w-[46ch] text-lead text-graphite-300">
-              Persistent Software is Chris Sweigard: one senior engineer with two decades of
-              production experience and modern tooling behind it. You get a prototype you can
-              click in days, and the codebase itself at the end.
+              Persistent Software is Chris Sweigard, with two decades of production experience
+              and modern tooling behind it. You talk to the person writing the code, and the
+              codebase is yours at the end.
             </p>
             <div className="flex flex-col gap-3 pt-1 sm:flex-row">
               <Button asChild variant="signal" size="lg">
@@ -66,14 +68,18 @@ export default function HomePage() {
                 <a href="#services">See what I build</a>
               </Button>
             </div>
+            <span className="ps-label leading-relaxed text-graphite-400">
+              30 minutes · You leave with a plan and a number
+            </span>
           </div>
           <Terminal lines={terminalLines} />
         </div>
       </Band>
 
+      <Proof />
       <Services />
       <Process />
-      <Product />
+      <Built />
       <Practice />
 
       <Band tone="ink" spine className="py-16 md:py-20">
@@ -108,8 +114,8 @@ export default function HomePage() {
           <Stat tone="ink" value="8" unit="+" className="p-0">
             Years leading engineering teams
           </Stat>
-          <Stat tone="ink" value="100" unit="%" className="p-0">
-            Of the code is yours at handover
+          <Stat tone="ink" value="10" unit="+" className="p-0">
+            Years BeerXchange has been live in both app stores
           </Stat>
         </div>
       </Band>

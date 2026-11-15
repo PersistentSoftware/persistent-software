@@ -11,8 +11,8 @@ const marks = [
   },
   {
     icon: Rocket,
-    title: 'A prototype in days',
-    body: 'AI-assisted build, reviewed line by line, turning ideas into something clickable in week one.'
+    title: 'A prototype in week one',
+    body: 'AI-assisted build, reviewed line by line, turning an idea into something you can click.'
   },
   {
     icon: Users,
