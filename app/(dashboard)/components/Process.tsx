@@ -36,9 +36,10 @@ const steps = [
 
 export function Process() {
   return (
-    <Band className="pt-0 md:pt-0">
+    <Band id="process" className="scroll-mt-8 pt-0 md:pt-0">
       <SectionHeader label="How a build runs" />
-      <ul className="mt-10 border-t border-rule">
+      <h2 className="mt-10 text-h2">From a first call to a codebase you own.</h2>
+      <ul className="mt-8 border-t border-rule">
         {steps.map((item) => (
           <li
             key={item.step}

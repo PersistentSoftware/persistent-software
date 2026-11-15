@@ -17,7 +17,7 @@ type Route = {
 };
 
 const routes: Route[] = [
-  { path: '/', lastModified: '2026-10-12', changeFrequency: 'monthly', priority: 1 },
+  { path: '/', lastModified: '2026-11-14', changeFrequency: 'monthly', priority: 1 },
   { path: '/mobile', lastModified: '2026-09-11', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/migrations', lastModified: '2026-09-11', changeFrequency: 'monthly', priority: 0.9 },
   { path: '/ai-search', lastModified: '2026-09-14', changeFrequency: 'monthly', priority: 0.9 },

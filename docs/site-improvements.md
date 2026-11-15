@@ -94,6 +94,8 @@ This page has the site's most compelling story and it is switched off, while its
 
 ## Tier 2: conversion and content
 
+Tasks 2.1, 2.2 and 2.3 are expanded into options with a recommendation each in [home-page-options.md](home-page-options.md). Where the two files differ, that file wins.
+
 ### 2.1 Rewrite the home hero
 
 File: `app/(dashboard)/page.tsx`.
