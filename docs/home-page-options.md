@@ -7,8 +7,10 @@ Researched 2026-11-14. This expands tasks 2.1, 2.2 and 2.3 of [site-improvements
 Built on 2026-11-14 on branch `home-proof-headline-cards`: 1A, 1B, 2A and 3C.
 
 - 1B links BeerXchange to its App Store and Google Play listings and uses the owner's description.
-- 2A keeps the week-one promise the home page already made. The mismatch with `/mobile` ("two weeks") is still open.
-- Not done: the track-record line (1C), cutting Process to three steps, and replacing the "100%" stat. Process gained an `h2` only.
+- 2A: the week-one promise is now uniform. `/mobile` promises a working prototype on your phone in week one, and `/about` uses the same wording.
+- 1C: the quote band ends with the owner's line, "Twenty years at Teachley · Divide · Medialets · TxVia".
+- The "100%" stat is replaced on the home page, `/about` and `/mobile` with the owner's figure: BeerXchange has been in both app stores for 10+ years.
+- Not done: cutting Process to three steps. Process gained an `h2` only.
 
 ## What the research found
 
@@ -153,10 +155,4 @@ Recommended order for the home page once all three land:
 
 ## Owner inputs these options need
 
-| Needed for | Question |
-| --- | --- |
-| 1C | Which employers may be named on the home page, and what is the exact wording for the Google acquisition? |
-| 2A | Can every engagement promise a working prototype in week one, or only web builds? |
-| Closing band | One real number to replace the "100%" stat (apps shipped, years on React Native, or similar). |
-
-Options 1A, 2B and 3C need no input and can be built immediately.
+None outstanding. The owner supplied the BeerXchange store links, the track-record line, the week-one decision and the BeerXchange figure.

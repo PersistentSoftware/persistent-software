@@ -44,6 +44,9 @@ export function Proof() {
           </Link>
         </div>
       </figure>
+      <p className="ps-label mt-12 border-t border-rule pt-6 leading-relaxed text-graphite-500">
+        Twenty years at Teachley · Divide · Medialets · TxVia
+      </p>
     </Band>
   );
 }

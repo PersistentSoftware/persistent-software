@@ -6,13 +6,13 @@ import { Smartphone, TestTube2, Layers, Bell, RefreshCw, LineChart } from 'lucid
 const phases = [
   {
     week: 'Week 1',
-    title: 'Pin down what the app actually is',
-    body: 'I go through your prototype or your requirements screen by screen and write down the behaviour — including the parts that only exist in someone’s head. That document is what I build against, and it is yours whether or not we continue.'
+    title: 'A working prototype, and the app written down',
+    body: 'I go through your prototype or your requirements screen by screen and write down the behaviour — including the parts that only exist in someone’s head. By the end of the week a working prototype is installed on your phone. The document and the prototype are yours whether or not we continue.'
   },
   {
     week: 'Weeks 2–3',
     title: 'Foundation before features',
-    body: 'Navigation, data layer, auth, theming and the build pipeline land first. Both stores get a signed internal build in the first two weeks, so distribution is never the thing that surprises you at the end.'
+    body: 'Navigation, data layer, auth, theming and the build pipeline land first. Signed internal builds go to both stores here, so distribution is never the thing that surprises you at the end.'
   },
   {
     week: 'Weeks 3–7',
@@ -69,9 +69,9 @@ export function Approach() {
     <Band className="pt-0 pb-16 md:pt-0 md:pb-20">
       <SectionHeader label="How a build runs" />
       <div className="mt-10 max-w-[68ch]">
-        <h2 className="text-h2">A signed build on your phone in two weeks</h2>
+        <h2 className="text-h2">A working prototype on your phone in week one</h2>
         <p className="mt-3.5 text-graphite-500">
-          You get a new one every week after that. Nothing about the timeline depends on you
+          You get a new build every week after that. Nothing about the timeline depends on you
           trusting a status update.
         </p>
       </div>

@@ -114,8 +114,8 @@ export default function HomePage() {
           <Stat tone="ink" value="8" unit="+" className="p-0">
             Years leading engineering teams
           </Stat>
-          <Stat tone="ink" value="100" unit="%" className="p-0">
-            Of the code is yours at handover
+          <Stat tone="ink" value="10" unit="+" className="p-0">
+            Years BeerXchange has been live in both app stores
           </Stat>
         </div>
       </Band>

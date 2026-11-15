@@ -5,7 +5,7 @@ import { Stat } from '@/components/ps/stat';
 const stats = [
   { value: '1', unit: ' codebase', label: 'iOS and Android from a single React Native app' },
   { value: '6', unit: '–10 wks', label: 'Working prototype to a build in both stores' },
-  { value: '100', unit: '%', label: 'Of the app is yours — source, pipeline and accounts' }
+  { value: '10', unit: '+ yrs', label: 'My own app, BeerXchange, live in both stores' }
 ];
 
 export function Hero() {
